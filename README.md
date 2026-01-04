@@ -16,6 +16,7 @@ Tecnologías clave:
 
 
 Desarrollo Frontend
+
 Este proyecto es una aplicación de gestión de inventario desarrollada con Angular, utilizando la funcionalidad moderna de Signals (señales) introducida en Angular 16+ para el manejo reactivo del estado. La aplicación sigue una arquitectura modular y organizada por funcionalidades, con una clara separación de responsabilidades.
 Características principales:
 •	Arquitectura modular: Separación clara en módulos core, features (como productos-form, productos-list, usuario-list, login) y shared.
