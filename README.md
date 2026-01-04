@@ -36,3 +36,5 @@ Scripts principales (package.json):
 •	start: Inicia el servidor de desarrollo.
 •	build: Compila para producción.
 •	test: Ejecuta pruebas unitarias.
+
+La base de datos utilizada es PostgresQL. Se creo la base de datos inventory_db con sus 4 tablas (usuarios, productos, categoría, movimiento)
