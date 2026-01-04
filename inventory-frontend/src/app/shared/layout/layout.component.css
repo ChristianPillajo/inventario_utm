@@ -1,0 +1,69 @@
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Navbar fijo arriba */
+app-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: white;
+  border-bottom: 1px solid #dee2e6;
+  z-index: 1000;
+}
+
+/* Contenido debajo del navbar */
+.layout-body {
+  display: flex;
+  margin-top: 60px; /* Altura del navbar */
+  height: calc(100vh - 60px);
+}
+
+/* Sidebar */
+.sidebar-wrapper {
+  width: 250px;
+  background: #f8f9fa;
+  border-right: 1px solid #dee2e6;
+  overflow-y: auto;
+  padding: 20px 0;
+}
+
+/* Área del formulario */
+.main-wrapper {
+  flex: 1;
+  overflow-y: auto;
+  padding: 60px;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Centrar formulario */
+.form-layout {
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .layout-body {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+
+  .sidebar-wrapper {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    border-right: none;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .main-wrapper {
+    min-height: calc(100vh - 260px);
+    padding: 20px;
+  }
+}

@@ -1,0 +1,70 @@
+.navbar {
+  height: 64px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  .menu-button {
+    margin-right: 16px;
+  }
+
+  .navbar-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    padding: 0 8px;
+    border-radius: 1px;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .user-details {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      .user-name {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: white;
+      }
+
+      .user-role {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+
+    .user-menu {
+      color: white;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    .user-info {
+      .user-details {
+        display: none;
+      }
+    }
+
+    .navbar-title {
+      font-size: 1rem;
+    }
+  }
+}

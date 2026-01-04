@@ -1,0 +1,26 @@
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <div class="logo">
+      <mat-icon></mat-icon>
+      <span>Inventario</span>
+    </div>
+  </div>
+
+  <div class="sidebar-menu">
+    @for (item of menuItems(); track item.label) {
+      <div class="menu-item"
+        (click)="navigateTo(item.route)">
+
+        <span class="menu-label">{{ item.label }}</span>
+      </div>
+    }
+  </div>
+
+  <div class="sidebar-footer">
+    <div class="system-status">
+      <div class="status-indicator active"></div>
+      <span>Sistema Activo</span>
+    </div>
+    <div class="app-version">v1.0.0</div>
+  </div>
+</nav>

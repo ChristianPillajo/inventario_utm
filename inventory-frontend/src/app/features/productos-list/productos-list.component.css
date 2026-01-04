@@ -1,0 +1,257 @@
+.productos-container {
+  min-height: calc(100vh - 200px);
+}
+
+.page-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+
+   .stat-card {
+     border-radius: 12px;
+     border: none;
+     transition: transform 0.2s;
+     height: 100%;
+
+     &:hover {
+       transform: translateY(-2px);
+     }
+
+     .stat-icon {
+       width: 50px;
+       height: 50px;
+       border-radius: 10px;
+       background: rgba(255, 255, 255, 0.2);
+       display: flex;
+       align-items: center;
+       justify-content: center;
+
+       mat-icon {
+         font-size: 28px;
+         width: 28px;
+         height: 28px;
+       }
+     }
+   }
+
+
+   .product-avatar {
+     width: 50px;
+     height: 50px;
+     border-radius: 10px;
+     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: white;
+     flex-shrink: 0;
+
+     mat-icon {
+       font-size: 24px;
+       width: 24px;
+       height: 24px;
+     }
+   }
+
+.product-info {
+  min-width: 0;
+}
+
+.text-truncate-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.4;
+}
+
+
+   .stock-badge {
+     display: inline-flex;
+     align-items: center;
+     padding: 6px 12px;
+     border-radius: 20px;
+     font-size: 0.875rem;
+     font-weight: 500;
+
+     &.agotado {
+       background-color: #fee;
+       color: #d32f2f;
+       border: 1px solid #fcc;
+     }
+
+     &.bajo {
+       background-color: #fff3e0;
+       color: #f57c00;
+       border: 1px solid #ffe0b2;
+     }
+
+     &.medio {
+       background-color: #e3f2fd;
+       color: #1976d2;
+       border: 1px solid #bbdefb;
+     }
+
+     &.normal {
+       background-color: #e8f5e9;
+       color: #388e3c;
+       border: 1px solid #c8e6c9;
+     }
+
+     mat-icon {
+       font-size: 16px;
+       width: 16px;
+       height: 16px;
+     }
+   }
+
+
+   .stock-actions {
+     display: flex;
+     gap: 4px;
+
+     button {
+       width: 30px;
+       height: 30px;
+
+       mat-icon {
+         font-size: 16px;
+         width: 16px;
+         height: 16px;
+       }
+     }
+   }
+
+
+   .products-table {
+     th {
+       background-color: #f8f9fa;
+       color: #495057;
+       font-weight: 600;
+       padding: 16px;
+       white-space: nowrap;
+     }
+
+     td {
+       padding: 16px;
+       vertical-align: middle;
+       border-bottom: 1px solid #f0f0f0;
+     }
+
+     tr:hover {
+       background-color: #f8f9fa;
+     }
+
+     tr:last-child td {
+       border-bottom: none;
+     }
+   }
+
+
+   .btn-group {
+     display: flex;
+     gap: 4px;
+     justify-content: flex-end;
+
+     button {
+       width: 36px;
+       height: 36px;
+       border-radius: 6px;
+
+       mat-icon {
+         font-size: 18px;
+         width: 18px;
+         height: 18px;
+       }
+     }
+   }
+
+
+   .empty-state-icon {
+     opacity: 0.3;
+   }
+
+
+   .custom-paginator {
+     background: transparent;
+
+     .mat-paginator-container {
+       padding: 0;
+     }
+   }
+
+
+@media (max-width: 992px) {
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .stat-card {
+    .stat-icon {
+      width: 40px;
+      height: 40px;
+
+      mat-icon {
+        font-size: 24px;
+      }
+    }
+
+    h3 {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .products-table {
+    display: block;
+
+    thead {
+      display: none;
+    }
+
+    tbody, tr, td {
+      display: block;
+      width: 100%;
+    }
+
+    tr {
+      margin-bottom: 16px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 12px;
+    }
+
+    td {
+      border: none;
+      padding: 8px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &:before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #6c757d;
+        margin-right: 10px;
+        flex-shrink: 0;
+      }
+    }
+
+    .btn-group {
+      justify-content: center;
+    }
+  }
+
+  .product-avatar {
+    width: 40px;
+    height: 40px;
+
+    mat-icon {
+      font-size: 20px;
+    }
+  }
+}

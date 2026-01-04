@@ -1,0 +1,188 @@
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: linear-gradient(180deg, #2c3e50 0%, #1a252f 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease;
+
+  .sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.25rem;
+      font-weight: 600;
+
+      mat-icon {
+        font-size: 28px;
+        width: 28px;
+        height: 28px;
+        color: #4dabf7;
+      }
+    }
+  }
+
+  .sidebar-menu {
+    flex: 1;
+    padding: 20px 0;
+    overflow-y: auto;
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      padding: 12px 20px;
+      margin: 4px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      position: relative;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      &.active {
+        background-color: #4dabf7;
+        box-shadow: 0 2px 8px rgba(77, 171, 247, 0.3);
+
+        .menu-icon {
+          color: white;
+        }
+
+        .menu-label {
+          color: white;
+          font-weight: 500;
+        }
+      }
+
+      .menu-icon {
+        position: relative;
+        margin-right: 12px;
+        display: flex;
+        align-items: center;
+
+        mat-icon {
+          font-size: 20px;
+          width: 20px;
+          height: 20px;
+          color: rgba(255, 255, 255, 0.7);
+        }
+
+        .menu-badge {
+          position: absolute;
+          top: -8px;
+          right: -8px;
+          background-color: #ff6b6b;
+          color: white;
+          font-size: 0.65rem;
+          min-width: 18px;
+          height: 18px;
+          border-radius: 9px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 4px;
+        }
+      }
+
+      .menu-label {
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.8);
+        transition: color 0.2s;
+      }
+    }
+  }
+
+  .sidebar-footer {
+    padding: 15px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.8rem;
+
+    .system-status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+
+      .status-indicator {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+
+        &.active {
+          background-color: #51cf66;
+          box-shadow: 0 0 8px #51cf66;
+        }
+      }
+
+      span {
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+
+    .app-version {
+      color: rgba(255, 255, 255, 0.4);
+      text-align: center;
+    }
+  }
+}
+
+
+   .sidebar-collapsed {
+     width: 70px;
+
+     .sidebar-header {
+       padding: 20px 15px;
+
+       .logo span {
+         display: none;
+       }
+     }
+
+     .menu-item {
+       justify-content: center;
+       padding: 12px !important;
+       margin: 4px 5px !important;
+
+       .menu-label {
+         display: none;
+       }
+
+       .menu-icon {
+         margin-right: 0;
+       }
+     }
+
+     .sidebar-footer {
+       padding: 15px 10px;
+
+       .system-status span,
+       .app-version {
+         display: none;
+       }
+     }
+   }
+
+
+   .sidebar-menu::-webkit-scrollbar {
+     width: 4px;
+   }
+
+.sidebar-menu::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
